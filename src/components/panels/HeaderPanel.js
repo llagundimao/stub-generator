@@ -1,6 +1,8 @@
 import React from 'react'
-import { Nav, Navbar, Container, NavDropdown } from 'react-bootstrap'
+import { Button } from 'react-bootstrap'
+import { Nav, Navbar, Container } from 'react-bootstrap'
 import TabsEnum from '../../common/Enums/TabsEnum'
+import { useAuth } from '../../routes/Context/MasterContext'
 
 const Tabs = [
   {
@@ -15,9 +17,11 @@ const Tabs = [
     type: TabsEnum.REPORT,
     title: 'Report',
   },
-];
+]
 
 const HeaderPanel = ({ value, handleTabSelect }) => {
+  const { signout } = useAuth()
+
   return (
     <Navbar bg="light" expand="lg">
       <Container>
@@ -37,10 +41,11 @@ const HeaderPanel = ({ value, handleTabSelect }) => {
                 >
                   {t.title}
                 </Nav.Link>
-              );
+              )
             })}
           </Nav>
         </Navbar.Collapse>
+        <Button onClick={signout}>Logout</Button>
       </Container>
     </Navbar>
   )
