@@ -13,7 +13,7 @@ export function AuthProvider({ children }) {
   const dispatch = useDispatch()
   const [authError, setAuthError] = useState(null)
   const { user } = useSelector(state => state.master)
- console.log('whatt: ', user)
+ 
   function signin(email, password) {
     setAuthError(null)
     return auth

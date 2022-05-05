@@ -12,7 +12,6 @@ function Home() {
   const navigate = useNavigate()
 
   useEffect(() => {
-    console.log('=== useremail: ', user?.email)
     if (!user?.email) navigate('/signin')
 
   }, [user])

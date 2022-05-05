@@ -8,7 +8,6 @@ function Home() {
   const [selectedTab, setSelectedTab] = useState(TabsEnum.GENERATE)
 
   useEffect(() => {
-    console.log('selectedTab: ', selectedTab)
   }, [selectedTab])
 
   return (

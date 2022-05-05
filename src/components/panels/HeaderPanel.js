@@ -31,7 +31,7 @@ const HeaderPanel = ({ value, handleTabSelect }) => {
           <Nav className="me-auto">
             {Tabs.map((t) => {
               const isSelected = t.type === value ? 'selected' : ''
-              console.log('isss: ', isSelected)
+
               return (
                 <Nav.Link
                   key={t.type}
