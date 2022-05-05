@@ -12,7 +12,6 @@ function LoginView() {
   const [loading, setLoading] = useState(false)
 
   useEffect(() => {
-    console.log('=== useremail: ', user?.email)
     if (user?.email) {
       navigate('/home')
     } else {
